@@ -6,7 +6,7 @@
   -webkit-box-sizing: border-box;
 }
 
-.container .tasks .task span, .container .top .add {
+.container .tasks .task span, .container .clear, .container .top .add {
   background-color: rgb(255, 91, 15);
   color: white;
   font-weight: bold;
@@ -36,8 +36,13 @@
 .container .top .add {
   margin-left: 10px;
 }
-.container .tasks {
+.container .clear {
   margin-top: 20px;
+  display: none;
+  text-align: center;
+}
+.container .tasks {
+  display: none;
   border-radius: 8px;
   padding: 20px;
   background-color: rgb(218, 218, 218);

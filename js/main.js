@@ -1,4 +1,5 @@
 let addBtn = document.querySelector(".add");
+let clear = document.querySelector(".clear");
 let tasks = document.querySelector(".tasks");
 let input = document.querySelector(".top input")
 let text = (textP,txt)=>{
@@ -17,7 +18,6 @@ data.forEach((e, i)=>{
 addBtn.onclick=()=>{
   input.value!=""?toggle(input.value, data2.length):""
 }
-
 function toggle(e, i){
   let div = document.createElement("div")
   let par = document.createElement("p")
@@ -44,5 +44,15 @@ function toggle(e, i){
       toggle(e.value, i)
     })
     window.localStorage.setItem("data", JSON.stringify(data3))
+    data2.length>0?clear.style.display="block":clear.style.display="none";
+    data2.length>0?tasks.style.display="block":tasks.style.display="none";
   }
+  data2.length>0?clear.style.display="block":clear.style.display="none";
+  data2.length>0?tasks.style.display="block":tasks.style.display="none";
 }
+clear.onclick=_=>{
+  localStorage.clear();
+  tasks.innerHTML="";
+  tasks.style.display="none";
+  clear.style.display="none";
+};
