@@ -13,6 +13,17 @@
   padding: 8px;
   border-radius: 8px;
   cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+::-webkit-scrollbar {
+  background: rgb(218, 218, 218);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(255, 91, 15);
 }
 
 .container {
@@ -44,7 +55,7 @@
 .container .tasks {
   display: none;
   border-radius: 8px;
-  padding: 20px;
+  padding: 20px 60px;
   background-color: rgb(218, 218, 218);
 }
 .container .tasks .task:not(:first-child) {
@@ -62,4 +73,8 @@
 .container .tasks .task span {
   padding: 4px;
   font-size: 15px;
+  margin-left: 10px;
+}
+.container .tasks .task p {
+  flex: 1;
 }/*# sourceMappingURL=main.css.map */

@@ -53,6 +53,7 @@ function toggle(e, i){
 clear.onclick=_=>{
   localStorage.clear();
   tasks.innerHTML="";
+  data2=[]
   tasks.style.display="none";
   clear.style.display="none";
 };
